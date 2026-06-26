@@ -369,20 +369,40 @@ p, .ds-content p, .cine-text-side p, .footer-info, .footer-hours p, .footer-bott
     .floating-btn { width: 50px; height: 50px; }
     .floating-btn svg { width: 22px; height: 22px; }
 
+    /* NOVO COMPORTAMENTO RESPONSIVO: QUADROS MENORES E ESPALHADOS NO CELULAR */
     .floating-frame {
-        position: relative !important; 
-        left: 0 !important;
-        right: 0 !important;
-        top: 0 !important;
-        margin: 40px auto !important; 
-        transform: rotate(0deg) !important; 
-        width: 90% !important; 
-        max-width: 320px !important; 
-        height: 250px !important;
-        box-shadow: 6px 6px 0px rgba(0,0,0,0.8) !important;
-        pointer-events: auto !important; 
+        position: absolute !important; /* Volta a flutuar na página */
+        display: block !important;    /* Garante que fiquem visíveis */
+        width: 110px !important;       /* Bem menores para caber no celular */
+        height: 140px !important;
+        box-shadow: 4px 4px 0px rgba(0,0,0,0.8) !important;
+        border-width: 3px !important;  /* Borda um pouco mais fina para combinar */
     }
-    .frame-1 { transform: rotate(-2deg) !important; }
-    .frame-3 { transform: rotate(2deg) !important; }
-    .frame-5 { transform: rotate(-1deg) !important; }
+
+    /* Posições milimétricas para as fotos "invadirem" as bordas das telas pequenas: */
+    .frame-1 { 
+        left: 10px !important; 
+        top: 300px !important; 
+        transform: rotate(-6deg) !important; 
+    }
+    .frame-2 { 
+        right: 10px !important; 
+        top: 950px !important; 
+        transform: rotate(5deg) !important; 
+    }
+    .frame-3 { 
+        left: 10px !important; 
+        top: 1350px !important; 
+        transform: rotate(-8deg) !important; 
+    }
+    .frame-4 { 
+        right: 10px !important; 
+        top: 2450px !important; 
+        transform: rotate(8deg) !important; 
+    }
+    .frame-5 { 
+        left: 7px !important;  
+        top: 3390px !important; 
+        transform: rotate(-4deg) !important; 
+    }
 }
